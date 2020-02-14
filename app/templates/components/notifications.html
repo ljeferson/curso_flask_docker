@@ -1,0 +1,19 @@
+{% with erros = get_flashed_messages(category_filter=["danger"])%}
+    {% if erros %}
+        <div class="alert alert-danger" style="margin-top: 10px" role="alert">
+            {% for msg in erros %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
+
+{% with erros = get_flashed_messages(category_filter=["success"])%}
+    {% if success %}
+        <div class="alert alert-success" style="margin-top: 10px" role="alert">
+            {% for msg in erros %}
+                {{ msg }}
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}
